@@ -123,7 +123,6 @@ def get_train_batch():
     clips = np.empty([c.BATCH_SIZE, c.TRAIN_HEIGHT, c.TRAIN_WIDTH, (3 * (c.HIST_LEN + 1))],
                      dtype=np.float32)
     for i in range(c.BATCH_SIZE):
-        print ("Lynray - ", c.TRAIN_DIR_CLIPS)
         path = c.TRAIN_DIR_CLIPS + str(np.random.choice(c.NUM_CLIPS)) + '.npz'
         clip = np.load(path)['arr_0']
 
